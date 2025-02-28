@@ -1,5 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
+import static java.lang.Math.*;
 
 public class Lesson_1_7_tasks {
     public static void main(String[] args) {
@@ -84,11 +85,32 @@ public class Lesson_1_7_tasks {
 //        При выводе значение функции представьте с четырьмя знаками после десятичной точки.
 //        https://stepik.org/lesson/813895/step/15?unit=817206
 
+//        Locale.setDefault(Locale.US);
+//        Scanner scanner = new Scanner(System.in);
+//        double x = scanner.nextDouble();
+//        x = Math.log(x + 7 * Math.sqrt(Math.pow(x, 4) + Math.PI));
+//        System.out.printf("%.4f", x);
+
+
+
+//        Ввести значение вещественного аргумента a и вычислить значения двух функций:
+//        Вывести на консоль сначала z, а потом y, разделив их пробелом.
+//        Значения представить с пятью знаками после десятичной точки.
+//        https://stepik.org/lesson/813895/step/16?unit=817206
+
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
-        double x = scanner.nextDouble();
-        x = Math.log(x + 7 * Math.sqrt(Math.pow(x, 4) + Math.PI));
-        System.out.printf("%.4f", x);
+        double a = scanner.nextDouble();
+        double z = 2 * pow(sin(3 * PI - 2 * a), 2) * pow(cos(5 * PI + 2 * a), 2);
+        double y = (double)1/4 - (double)1/4 * sin((double)5/2 * PI - 8 * a);
+
+        System.out.printf("%.5f %.5f", z, y);
+
+//        другой вариант вывода
+//        System.out.printf("%.5f ",z);
+//        System.out.printf("%.5f ",y);
+
+
 
     }
 }
